@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <wisepricer_syncer2 translate="label" module="wisepricer_syncer2">
+            <!--label>Wisepricer Syncer2</label-->
+            <!--label><![CDATA[<img id="wisepricer_syncer2_block" src="" style="margin: 4px 0 0 -3px;" alt="" border="0" height="23" />&nbsp;<script>$('wisepricer_syncer2_block').src = SKIN_URL + "../../default/default/images/wisepricer_syncer2/wiser_logo.png";</script>]]></label-->
+            <label><![CDATA[<div style="position: relative"><img id="wisepricer_syncer2_block" src="" style="position: absolute; left: -2px;" alt="" border="0" height="18" /></div>&nbsp;<script>$('wisepricer_syncer2_block').src = SKIN_URL + "../../default/default/images/wisepricer_syncer2/wiser_logo.png";</script>]]></label>
+            <sort_order>100</sort_order>
+        </wisepricer_syncer2>
+    </tabs>
+    <sections>
+        <wisepricer_syncer2 translate="label" module="wisepricer_syncer2">
+            <label>Options</label>
+            <tab>wisepricer_syncer2</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+ 
+            <groups>
+                <authentication translate="label" module="wisepricer_syncer2">
+                    <label>Authentication Setup</label>
+                    <comment><![CDATA[
+                        <p>Hello,</p>
+                        <p>This document is intended to be a guide to installing Wiser’s Magento Extension on your Magento Installation. This will detail the necessary steps on both the Wiser app as well as on the user’s Magento Installation. This guide assumes you have already downloaded and installed the Magento Extension from Magento Connect and installed it on your Magento Installation. If you are experiencing challenges in doing so please submit a ticket to <a href="mailto:support@wiser.com">support@wiser.com</a>.</p>
+                        <p>
+                            <ol type="1">
+                                <li>1) The first step to integrating Magento to Wiser is to create a store in the Wiser app. Your CS representative can do this for you or if you feel comfortable enough in the app, you can do this on your own. This will generate an Authentication Key on Wiser’s app.</li>
+                                <li>2) The second step is taking the Authentication Key generated from the Wiser app and pasting it in the Authentication Key field within the Wiser tab of your Magento Installation. The Authentication key field should be the first field you see in the Extension tab.</li>
+                                <li>3) Once this is done, please notify your CS representative for the next steps in fully integrating your account. Thanks!</li>
+                            </ol>
+                        </p>
+                        ]]>
+                    </comment>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <token translate="label">
+                            <label>Authentication Key: </label>
+                            <comment><![CDATA[<span class="required">*</span>]]> Required</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </token>
+                    </fields>
+                </authentication>
+                
+            </groups>
+        </wisepricer_syncer2>
+    </sections>
+</config>

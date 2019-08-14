@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Wisepricer_Syncer2>
+            <version>2.0.0.3</version>
+            <modulename>Wisepricer Syncer2</modulename>	
+        </Wisepricer_Syncer2>
+    </modules>
+    <global>
+        <models>
+            <wisepricer_syncer2>
+                <class>Wisepricer_Syncer2_Model</class>
+            </wisepricer_syncer2>
+        </models>
+        <resources>
+            <wisepricer_syncer2_setup>
+                <setup>
+                    <module>Wisepricer_Syncer2</module>
+                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </wisepricer_syncer2_setup>
+        </resources>
+        <helpers>
+            <wisepricer_syncer2>
+                <class>Wisepricer_Syncer2_Helper</class>
+            </wisepricer_syncer2>
+        </helpers>
+        <events>
+            <websiterestriction_frontend>
+                <observers>
+                    <wisepricer_syncer2_observer>
+                        <class>wisepricer_syncer2/observer</class>
+                        <method>skipWebsiteRestriction</method>
+                    </wisepricer_syncer2_observer>
+                </observers>
+            </websiterestriction_frontend>
+        </events>
+    </global>
+    <frontend>
+        <routers>
+            <wisepricer_syncer2>
+                <use>standard</use>
+                <args>
+                    <module>Wisepricer_Syncer2</module>
+                    <frontName>wisesyncer2</frontName>
+                </args>
+            </wisepricer_syncer2>
+        </routers>
+        <enterprise>
+            <websiterestriction>
+                <full_action_names>
+                    <generic>
+                        <wisepricer_syncer2_api_ping />
+                        <wisepricer_syncer2_api_getWebsites />
+                        <wisepricer_syncer2_api_getAttributes />
+                        <wisepricer_syncer2_api_exportFile />
+                        <wisepricer_syncer2_api_importFile />
+                        <wisepricer_syncer2_api_export />
+                    </generic>
+                </full_action_names>
+            </websiterestriction>
+        </enterprise>
+    </frontend>
+    <default>
+        <wisepricer_syncer2>
+            <authentication>
+                <token></token>
+            </authentication>
+        </wisepricer_syncer2>
+    </default>
+</config>

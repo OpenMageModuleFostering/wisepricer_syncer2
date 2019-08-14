@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Wisepricer_Syncer2>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Wisepricer_JobQueue/>
+            </depends>
+        </Wisepricer_Syncer2>
+        <Wisepricer_JobQueue>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Wisepricer_JobQueue>
+    </modules>
+</config>
